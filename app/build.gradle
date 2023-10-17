@@ -24,6 +24,28 @@ android {
     }
 
     buildTypes {
+
+        debug {
+            // Configure debug build type
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-DEBUG"
+            // ...
+        }
+
+        qa {
+            initWith debug
+            applicationIdSuffix ".qa"
+            versionNameSuffix "-QA"
+            // ...
+        }
+
+        sit {
+            initWith debug
+            applicationIdSuffix ".sit"
+            versionNameSuffix "-SIT"
+            // ...
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
