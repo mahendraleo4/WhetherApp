@@ -11,7 +11,7 @@ data class WeatherResponse(
     @SerializedName("main") val main: Main,
     @SerializedName("weather") val weather: List<Weather>,
    // @SerializedName("sys") val sys: Sys,
-    @SerializedName("dt") val dt: Long,
+  //  @SerializedName("dt") val dt: Long,
     @SerializedName("id") val id: Int,
    // @SerializedName("coord") val coord: Coord
 ) : Parcelable
@@ -29,5 +29,5 @@ data class Main(
 @Parcelize
 data class Weather(
     @SerializedName("main") val main: String,
-    @SerializedName("description") val description: Int
+    @SerializedName("description") val description: String
 ): Parcelable
